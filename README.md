@@ -1,3 +1,3 @@
 ## Family Library
 
-A shared library for storing a list of your books
+A shared library for storing an index of books you own
