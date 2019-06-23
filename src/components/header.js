@@ -6,7 +6,14 @@ const Header = (props) => {
     return (
         <div>
             <h1>{title}</h1>
-            <SearchForm searchMyBooks = {props.searchMyBooks} />
+            <SearchForm
+                searchMyBooks = {props.searchMyBooks}
+                onAdd = {props.onAdd}
+                cancelAdd = {props.cancelAdd}
+                cancelSearch = {props.cancelSearch}
+                isAdding = {props.isAdding}
+                isSearching = {props.isSearching}
+            />
         </div>
     )
 }

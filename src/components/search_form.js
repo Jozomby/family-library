@@ -8,7 +8,15 @@ const SearchForm = (props) => {
     }
     const handleAdd = (event) => {
         event.preventDefault()
-        setQueryString("")
+        props.onAdd()
+    }
+    const cancelAdd = (event) => {
+        event.preventDefault()
+        props.cancelAdd()
+    }
+    const cancelSearch = (event) => {
+        event.preventDefault()
+        props.cancelSearch()
     }
     return (
         <div>
@@ -20,8 +28,10 @@ const SearchForm = (props) => {
                     value={queryString}
                     onChange={event => setQueryString(event.target.value)}
                 />
-                <button onClick={handleSearch} >Search</button>
-                <button onClick={handleAdd} >Add</button>
+                { !props.isAdding && (<button onClick={handleSearch} >Search</button>) }
+                { props.isAdding && (<button onClick={cancelAdd} >Cancel</button>) }
+                { props.isSearching && (<button onClick={cancelSearch} >Cancel</button>)}
+                { !props.isSearching && (<button onClick={handleAdd} >Add</button>) }
             </form>
         </div>
     )
