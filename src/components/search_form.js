@@ -7,6 +7,7 @@ const SearchForm = (props) => {
         () => {
             if (props.shouldClearSearchBar === true) {
                 setQueryString('')
+                props.resetShouldClearSearchBar()
             }
         },
         [props.shouldClearSearchBar]
