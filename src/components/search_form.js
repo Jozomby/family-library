@@ -1,8 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../css/search_form.css'
 
 const SearchForm = (props) => {
     const [queryString, setQueryString] = useState("")
+    useEffect(
+        () => {
+            if (props.shouldClearSearchBar === true) {
+                setQueryString('')
+            }
+        },
+        [props.shouldClearSearchBar]
+    )
     const handleSearch = (event) => {
         event.preventDefault()
         props.searchMyBooks(queryString)
@@ -13,10 +21,12 @@ const SearchForm = (props) => {
     }
     const cancelAdd = (event) => {
         event.preventDefault()
+        setQueryString('')
         props.cancelAdd()
     }
     const cancelSearch = (event) => {
         event.preventDefault()
+        setQueryString('')
         props.cancelSearch()
     }
     return (

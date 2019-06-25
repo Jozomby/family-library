@@ -25,6 +25,7 @@ function App() {
   const [activeFilter, setActiveFilter] = useState(null)
   const [isAdding, setIsAdding] = useState(false)
   const [isSearching, setIsSearching] = useState(false)
+  const [shouldClearSearchBar, setShouldClearSearchBar] = useState(false)
   const searchMyBooks = (queryString) => {
     setIsSearching(true)
     setActiveFilter(queryString)
@@ -78,7 +79,11 @@ function App() {
     // Make a call to FireBase to add the book
     setBooks([...books, book])
     setIsAdding(false)
+    setShouldClearSearchBar(true)
     setAddResults([])
+  }
+  const resetShouldClearSearchBar = () => {
+    setShouldClearSearchBar(false)
   }
   return (
     <div>
@@ -89,6 +94,8 @@ function App() {
         cancelAdd = {cancelAdd}
         isAdding = {isAdding}
         isSearching = {isSearching}
+        shouldClearSearchBar = {shouldClearSearchBar}
+        resetShouldClearSearchBar = {resetShouldClearSearchBar}
       />
       {!isAdding && (<BookList books = {books} sortBooks = {sortBooks} />)}
       {isAdding && (<AddList choices = {addResults} onSelection = {handleSelection} />)}

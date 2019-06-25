@@ -13,6 +13,8 @@ const Header = (props) => {
                 cancelSearch = {props.cancelSearch}
                 isAdding = {props.isAdding}
                 isSearching = {props.isSearching}
+                shouldClearSearchBar = {props.shouldClearSearchBar}
+                resetShouldClearSearchBar = {props.resetShouldClearSearchBar}
             />
         </div>
     )
