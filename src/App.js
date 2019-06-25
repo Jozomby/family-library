@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import Header from './components/header'
 import BookList from './components/book_list'
 import AddList from './components/add_list'
-import './App.css';
 
 function App() {
   // Populate this from Firebase
@@ -82,7 +81,7 @@ function App() {
     setAddResults([])
   }
   return (
-    <div className="App">
+    <div>
       <Header
         searchMyBooks = {searchMyBooks}
         cancelSearch = {cancelSearch}

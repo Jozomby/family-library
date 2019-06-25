@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import '../css/search_form.css'
 
 const SearchForm = (props) => {
     const [queryString, setQueryString] = useState("")
@@ -27,6 +28,7 @@ const SearchForm = (props) => {
                     placeholder="Title or Author"
                     value={queryString}
                     onChange={event => setQueryString(event.target.value)}
+                    className="searchBar"
                 />
                 { !props.isAdding && (<button onClick={handleSearch} >Search</button>) }
                 { props.isAdding && (<button onClick={cancelAdd} >Cancel</button>) }
