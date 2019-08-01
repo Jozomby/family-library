@@ -31,7 +31,7 @@ const SearchForm = (props) => {
         props.cancelSearch()
     }
     return (
-        <div>
+        <div className="search_form">
             <form>
                 <input
                     type="text"
