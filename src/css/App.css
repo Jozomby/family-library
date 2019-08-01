@@ -1,0 +1,11 @@
+body {
+    background-color: #F2F4F4
+}
+
+.App {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #262626;
+    line-height: 1.4;
+    margin-left: 25%;
+    margin-right: 25%;
+}
