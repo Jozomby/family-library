@@ -8,4 +8,11 @@ body {
     line-height: 1.4;
     margin-left: 25%;
     margin-right: 25%;
+    
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 50px;
 }

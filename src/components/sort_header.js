@@ -1,4 +1,5 @@
 import React from 'react'
+import '../css/search_form.css'
 
 const SortHeader = (props) => {
     const sortByTitle = () => {
@@ -11,9 +12,9 @@ const SortHeader = (props) => {
         props.sortBooks(field)
     }
     return (
-        <div>
-            <button onClick={sortByTitle}>Title</button>
-            <button onClick={sortByAuthor}>Author</button>
+        <div className="sort_buttons"> 
+            <button onClick={sortByTitle}>Sort By Title</button>
+            <button onClick={sortByAuthor}>Sort By Author</button>
         </div>
     )
 }

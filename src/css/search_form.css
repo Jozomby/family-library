@@ -1,6 +1,10 @@
 .searchBar {
     width: 50%;
-    align-self: center
+    margin-left: 20%;
+    margin-bottom: 5%;
   }
   
-  
+.sort_buttons {
+  padding: 5px;
+  margin: 0 auto;
+}

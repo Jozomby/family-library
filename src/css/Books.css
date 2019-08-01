@@ -1,7 +1,6 @@
 .table_body {
     text-align: left;
     vertical-align: center;
-    background: #F8F9F9;
 }
 .table_body tr:nth-child(even) {
     background-color: #428ca369;
@@ -14,9 +13,11 @@
 
 .title {
     font-weight:bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
     
 }
 
 .author {
-    font-weight: normal;
+    font-style: italic;
 }
