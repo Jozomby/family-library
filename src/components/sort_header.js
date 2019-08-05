@@ -13,8 +13,8 @@ const SortHeader = (props) => {
     }
     return (
         <div className="sort_buttons"> 
-            <button onClick={sortByTitle}>Sort By Title</button>
-            <button onClick={sortByAuthor}>Sort By Author</button>
+            <button className="button" onClick={sortByTitle}>Sort By Title</button>
+            <button className="button" onClick={sortByAuthor}>Sort By Author</button>
         </div>
     )
 }

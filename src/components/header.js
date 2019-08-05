@@ -1,10 +1,11 @@
 import React from 'react'
 import SearchForm from './search_form'
+import '../css/header.css'
 
 const Header = (props) => {
     const title = "Family Library"
     return (
-        <div>
+        <div className="header">
             <h1>{title}</h1>
             <SearchForm
                 searchMyBooks = {props.searchMyBooks}

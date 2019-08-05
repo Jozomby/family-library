@@ -41,10 +41,10 @@ const SearchForm = (props) => {
                     onChange={event => setQueryString(event.target.value)}
                     className="searchBar"
                 />
-                { !props.isAdding && (<button onClick={handleSearch} >Search</button>) }
-                { props.isAdding && (<button onClick={cancelAdd} >Cancel</button>) }
-                { props.isSearching && (<button onClick={cancelSearch} >Cancel</button>)}
-                { !props.isSearching && (<button onClick={handleAdd} >Add</button>) }
+                { !props.isAdding && (<button className="button" onClick={handleSearch} >Search</button>) }
+                { props.isAdding && (<button className="button" onClick={cancelAdd} >Cancel</button>) }
+                { props.isSearching && (<button className="button" onClick={cancelSearch} >Cancel</button>)}
+                { !props.isSearching && (<button className="button" onClick={handleAdd} >Add</button>) }
             </form>
         </div>
     )

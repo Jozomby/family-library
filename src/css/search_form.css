@@ -2,9 +2,21 @@
     width: 50%;
     margin-left: 20%;
     margin-bottom: 5%;
+    padding: 7px 10px;
   }
   
 .sort_buttons {
   padding: 5px;
   margin: 0 auto;
+}
+
+.button {
+  background-color: #428ca369;
+  padding: 10px 24px;
+  border: none;
+  font-size: 15px;
+}
+
+.button:hover {
+  opacity: 0.7;
 }
